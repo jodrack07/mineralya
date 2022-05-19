@@ -2,4 +2,4 @@
 
 ### Deployment
 
-[Live Demo]()
+[Live Demo](https://joseph07-drack.github.io/mineralya/)
