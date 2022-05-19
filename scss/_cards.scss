@@ -1,0 +1,82 @@
+@use './variable' as *;
+
+.cards,
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+
+  & .card .image-box {
+    margin: 0 auto;
+  }
+
+  & img {
+    width: 100%;
+    object-fit: contain;
+  }
+  & h3 {
+    margin-bottom: 0.2rem;
+  }
+
+  & a {
+    text-transform: uppercase;
+  }
+}
+
+// OUR SERVICES
+.services {
+  margin: 30x 0;
+  color: $color-1;
+
+  & .main {
+    padding: 0 45px;
+    margin: auto;
+  }
+
+  & .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $color-3;
+
+    & .card {
+      cursor: pointer;
+      width: 25%;
+      padding: 50px 25px;
+      background-color: $color-1;
+      border: 1px solid $color-3;
+      border-radius: 6px;
+      text-align: center;
+      transition: all 0.4 ease;
+
+      &:hover {
+        background-color: $color-5;
+        border: 2px solid $color-4;
+
+        & .box {
+          transform: scale(1.05);
+        }
+      }
+
+      & .box {
+        transform: all 0.3s ease;
+
+        & .fa-solid,
+        .fa-brands {
+          font-size: 50px;
+        }
+
+        & h3 {
+          font-size: 25px;
+          padding: 10px 0 7px;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  margin-bottom: 50px;
+}

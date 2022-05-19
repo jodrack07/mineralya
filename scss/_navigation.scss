@@ -1,0 +1,63 @@
+@use './variable' as *;
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  color: $color-1;
+  top: 10px;
+  right: 8px;
+  z-index: 99;
+
+  & i {
+    font-size: 40px;
+  }
+}
+
+.main-nav {
+  position: relative;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(255, 252, 252);
+
+  & h1 {
+    color: $color-1;
+  }
+
+  // & img {
+  //   width: 100px;
+  // }
+
+  & ul {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    & li {
+      padding: 0 0.8rem;
+    }
+
+    & li:last-child {
+      padding: 0 0;
+    }
+
+    &.main-menu {
+      margin-left: 1.2rem;
+
+      & li a {
+        padding-bottom: 0.15rem;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover {
+          border-bottom: 2px solid $color-2;
+        }
+      }
+    }
+  }
+}

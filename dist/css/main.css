@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  color: #320c09;
+  top: 10px;
+  right: 8px;
+  z-index: 99;
+}
+.menu-btn i {
+  font-size: 40px;
+}
+
+.main-nav {
+  position: relative;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(255, 252, 252);
+}
+.main-nav h1 {
+  color: #320c09;
+}
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.main-nav ul li {
+  padding: 0 0.8rem;
+}
+.main-nav ul li:last-child {
+  padding: 0 0;
+}
+.main-nav ul.main-menu {
+  margin-left: 1.2rem;
+}
+.main-nav ul.main-menu li a {
+  padding-bottom: 0.15rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main-nav ul.main-menu li a:hover {
+  border-bottom: 2px solid #eedb73;
+}
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.showcase .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+.showcase .slide.active {
+  clip-path: circle(250% at 0 50%);
+  transition: 1s;
+  transition-property: clip-path;
+}
+.showcase .slide img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.showcase .slide .description {
+  position: absolute;
+  top: 0;
+  padding: 15px 30px;
+}
+.showcase .slide .description h2 {
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.showcase .slide .description p {
+  color: #fff;
+}
+.showcase .navigation {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.showcase .navigation .btn {
+  background: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 10px;
+}
+.showcase .navigation .btn.active {
+  background-color: #eedb73;
+}
+
+.cards,
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.cards .card .image-box,
+.profiles .card .image-box {
+  margin: 0 auto;
+}
+.cards img,
+.profiles img {
+  width: 100%;
+  object-fit: contain;
+}
+.cards h3,
+.profiles h3 {
+  margin-bottom: 0.2rem;
+}
+.cards a,
+.profiles a {
+  text-transform: uppercase;
+}
+
+.services {
+  margin: 30x 0;
+  color: #320c09;
+}
+.services .main {
+  padding: 0 45px;
+  margin: auto;
+}
+.services .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+.services .content .card {
+  cursor: pointer;
+  width: 25%;
+  padding: 50px 25px;
+  background-color: #320c09;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.4 ease;
+}
+.services .content .card:hover {
+  background-color: #222;
+  border: 2px solid #ccc4c3;
+}
+.services .content .card:hover .box {
+  transform: scale(1.05);
+}
+.services .content .card .box {
+  transform: all 0.3s ease;
+}
+.services .content .card .box .fa-solid,
+.services .content .card .box .fa-brands {
+  font-size: 50px;
+}
+.services .content .card .box h3 {
+  font-size: 25px;
+  padding: 10px 0 7px;
+}
+
+.team {
+  margin-bottom: 50px;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background-color: #320c09;
+  padding: 20px 0;
+}
+footer .boxes {
+  display: flex;
+  justify-content: center;
+}
+footer .boxes .box {
+  flex-basis: 25%;
+  padding: 10px 20px;
+}
+footer .boxes .box h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+footer .boxes .box .content {
+  margin-top: 20px;
+}
+footer .boxes .box .content .social-media-links {
+  margin-top: 20px;
+}
+footer .boxes .box .content .social-media-links a {
+  padding: 5px;
+}
+footer .boxes .box .content .social-media-links a i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #320c09;
+  font-weight: 700;
+  background-color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+footer .boxes .box .content .social-media-links a i:hover {
+  color: #fff;
+  background-color: #320c09;
+}
+footer .boxes .center .phone, footer .boxes .center .email {
+  display: flex;
+  align-items: center;
+}
+footer .boxes .center .phone span, footer .boxes .center .email span {
+  font-size: 17px;
+  font-weight: 600;
+}
+footer .boxes .center i {
+  padding-right: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+footer .boxes .right .content form {
+  display: flex;
+  flex-direction: column;
+}
+footer .boxes .right .content form .field {
+  display: flex;
+  flex-direction: column;
+}
+footer .boxes .right .content form .field label {
+  font-size: 17px;
+}
+footer .boxes .right .content form .field label span {
+  color: red;
+}
+footer .boxes .right .content form .field input {
+  height: 35px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+footer .boxes .right .content form .field input::placeholder {
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+}
+footer .boxes .right .content form .field textarea {
+  font-size: 17px;
+  outline: none;
+  padding-left: 5px;
+}
+footer .boxes .right .content form .field textarea::placeholder {
+  font-size: 17px;
+}
+footer .boxes .right button {
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 12px;
+  color: #fff;
+  background: #222;
+  margin-top: 10px;
+  border: none;
+}
+
+@media screen and (max-width: 992px) {
+  .showcase {
+    height: 450px;
+  }
+
+  .cards,
+.profiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services .content .card {
+    padding: 30px 15px;
+  }
+
+  footer .boxes .box .content .social-media-links a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100vw;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+
+  .main-nav ul.main-menu {
+    background-color: #320c09;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    transform: translateX(-5000px);
+    border-right: #eedb73 3px solid;
+    padding: 30px;
+    opacity: 0.9;
+    transition: transform 0.5s ease-in-out;
+    margin-left: -50px;
+  }
+  .main-nav ul.main-menu.display {
+    transform: translateX(-20px);
+  }
+  .main-nav ul.main-menu li {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .main-nav ul.main-menu li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .main-nav ul.main-menu li:last-child {
+    border-bottom: 0;
+  }
+
+  .showcase .slide .description {
+    padding: 20px 10px;
+  }
+  .showcase .slide .description h2 {
+    font-size: 30px;
+  }
+
+  .cards,
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+  }
+
+  .services .content .card {
+    width: 100%;
+  }
+
+  footer {
+    width: 95%;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  footer .boxes {
+    flex-direction: column;
+  }
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #320c09;
+  font-size: 1rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #320c09;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  position: relative;
+  width: 95vw;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+  margin: 30px 0;
+  padding-bottom: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background: #eedb73;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=main.css.map */

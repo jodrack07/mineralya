@@ -1,0 +1,10 @@
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 30px;
+  //   let's put this to the top
+  z-index: 2;
+  //   let's display this as none since it gonna be shown once at 700px and 500px max screen size
+  display: none;
+}
